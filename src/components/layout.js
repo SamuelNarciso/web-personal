@@ -7,10 +7,10 @@
 
 import * as React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+import "../styles/layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,9 +23,20 @@ const Layout = ({ children }) => {
     }
   `)
 
+    const linksHeader = ()=>{
+      return(<>
+      <Link className='logo' to='/'> SN </Link>
+      <Link to='/'> Inicio </Link>
+      <Link to='/acerca' > Acerca </Link>
+      <Link to='/blog' > Blog </Link>
+      <Link to='/contacto' > Contacto </Link>
+      <Link to='/proyectos' > Proyectos </Link>
+      </>  )
+    }
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={   linksHeader()  } />
       <div
         style={{
           margin: `0 auto`,
@@ -34,15 +45,15 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer
+        {/* <footer
           style={{
             marginTop: `2rem`,
           }}
-        >
+          >
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        </footer> */}
       </div>
     </>
   )

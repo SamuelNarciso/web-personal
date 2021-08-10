@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+
+$gris: #383838;
+$negro: #242424;
+$azul: #07ADEF;
+$blanco: #fafafa;
+
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font: 112.5%/1.45em 'Nunito', sans-serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+body {
+  max-width: 1400px;
+  width: 95%;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: $negro;
+  color: $blanco;
+  }
+
+  img {
+    border-style: none;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 1.45rem;
+  }
+
+  a{
+    color: $azul;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  header a{
+    display: flex;
+    justify-content: space-around;
+    color: $blanco;
+    text-decoration: none;
+    font-weight: 400;
+    .logo{
+      font-weight: 700;
+      color: #07ADEF;
+      font-size: 1.35em;
+    }
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+ .container{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-around;
+   width: 100%;
+ }
+  .halfContainer{
+  }
+  .tituloNormal {
+    color: $blanco;
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    font-size: calc(10px + 7vmin);
+    margin: .5em 0;
+  }
+  
+  .tituloResaltado {
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    font-size: calc(10px + 08vmin);
+    border-radius: 6px;
+    background: $blanco;
+    color: $negro;
+    padding: 0 5px;
+    position: relative;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      background: $blanco;
+      border-radius: 6px;
+      left: 0;
+      animation: resaltado 1.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+  }
+
+  .parrafoCursivo {
+    font-family: 'Kalam', cursive;
+    font-size: calc(8px + 2.5vmin);
+    color: $blanco;
+  }
+  .subtitulo {
+    font-size: calc(30px + 6vmin);
+    color: $blanco;
+  }
+  .parrafoNormal {
+    color: $blanco;
+    font-family: 'Nunito', sans-serif;
+    font-size: calc(8px + 2.5vmin);
+  }
+  
+
+  @media only screen and (max-width: 480px) {
+    html {
+      font-size: 100%;
+    }
+  }
+  

@@ -4,26 +4,45 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import HalfContainer from "../components/halfContainer"
+import Container from "../components/container"
 
 const IndexPage = () => (
+ <>
   <Layout>
     <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
+  <Container>
+
+  <HalfContainer>
+    <p className='tituloNormal' > Samuel <span className='tituloResaltado'> Narciso</span></p>
+    <p className='parrafoNormal' > Bienvenido a mi mundo </p>
+    </HalfContainer>
+    <HalfContainer>
     <StaticImage
+      src='../images/svg/WebDeveloper_Flatline.svg'
+      width={450}
+      alt='a guy coding'
+      style={{ marginBottom: `1.45rem` }}
+/>
+    </HalfContainer>
+  </Container>
+
+
+    {/* <StaticImage
       src="../images/gatsby-astronaut.png"
       width={300}
       quality={95}
       formats={["AUTO", "WEBP", "AVIF"]}
       alt="A Gatsby astronaut"
       style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
+    /> */}
+    {/* <p>
       <Link to="/page-2/">Go to page 2</Link> <br />
       <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    </p> */}
   </Layout>
+  
+ </>
 )
 
 export default IndexPage
