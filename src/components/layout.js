@@ -23,25 +23,16 @@ const Layout = ({ children }) => {
     }
   `)
 
-    const linksHeader = ()=>{
-      return(<>
-      <Link className='logo' to='/'> SN </Link>
-      <Link to='/'> Inicio </Link>
-      <Link to='/acerca' > Acerca </Link>
-      <Link to='/blog' > Blog </Link>
-      <Link to='/contacto' > Contacto </Link>
-      <Link to='/proyectos' > Proyectos </Link>
-      </>  )
-    }
+ 
 
   return (
     <>
-      <Header siteTitle={   linksHeader()  } />
+     
       <div
         style={{
           margin: `0 auto`,
           maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
+          // padding: `0 1.0875rem 1rem`,
         }}
       >
         <main>{children}</main>
