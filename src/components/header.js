@@ -1,43 +1,5 @@
-import * as React from "react"
-import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import React from 'react';
 
-const Header = ({ siteTitle, url }) => (
-  <header
-    style={{
-      background: `#242424`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1>
-        <Link
-          to={`/${url}`}
-          style={{
-            fontFamily: ` 'Kalam', cursive`,
-            color: `#fafafa`,
-            textDecoration: `none`,
-          }}
-          >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Header = ({titulo}) => <div className='titulo black t-left header'> <h2> {titulo} </h2> </div>;
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header;

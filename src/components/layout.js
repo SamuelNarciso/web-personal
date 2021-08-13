@@ -1,16 +1,11 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 
-import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql, Link } from "gatsby"
-
-import Header from "./header"
-import "../styles/layout.css"
+import '../styles/global-styles.css';
+import Header from './header';
+import Nav from './nav';
+import user from '../images/avatar.png';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -21,37 +16,34 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
-
- 
-
+  `);
   return (
-    <>
-     
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          // padding: `0 1.0875rem 1rem`,
-        }}
-      >
-        <main>{children}</main>
-        {/* <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-          >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer> */}
+    <div className="wrapper">
+      <div className="side">
+        <div className="avatar">
+          <img src={user} />
+        </div>
+
+        <h1 className="titulo t-center">
+          <span className="bold"> Samuel </span>{' '}
+          <span className="regular"> Narciso </span>
+        </h1>
+        <Nav />
+
+        <div className="icons-social">
+          <img />
+        </div>
       </div>
-    </>
-  )
-}
+
+      <div className="content">
+      {children}
+      </div>
+    </div>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;
