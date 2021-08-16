@@ -19,6 +19,11 @@ $text-color: #2d3047;
 $bg-color-blanco: #f1f1f1;
 $bg-color-gris: #cfcfcf;
 
+$sombra-linea: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+  rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+$sombra-grande: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+  rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
 .wrapper {
   border-radius: 12px;
   width: 100%;
@@ -33,11 +38,12 @@ $bg-color-gris: #cfcfcf;
 .side {
   position: sticky;
   grid-area: side;
-  background: $color-verde;
+  background: $bg-color-blanco;
   width: 100%;
   height: 100%;
   padding: 1em 0.5em;
   border-radius: 12px;
+  border-right: 1px solid $bg-color-gris;
 
   .avatar {
     height: 10em;
@@ -56,6 +62,7 @@ $bg-color-gris: #cfcfcf;
   background: $bg-color-blanco;
   padding: 1em 1.25em;
 }
+
 .nav ul {
   display: flex;
   flex-direction: column;
@@ -66,6 +73,7 @@ $bg-color-gris: #cfcfcf;
   a {
     font-size: 1.25em;
     color: $text-color;
+    // color: $bg-color-blanco;
     text-decoration: none;
     border-radius: 16px;
     width: 100%;
@@ -73,23 +81,15 @@ $bg-color-gris: #cfcfcf;
     li {
       padding: 0.5em;
       position: relative;
-      border-radius: 24px 0 0 24px;
+      border-radius: 24px;
       .icon {
         margin: 0 0.75em;
         font-size: 1.25em;
       }
 
       &:hover {
-        background: $bg-color-blanco;
-        &::after {
-          position: absolute;
-          content: '';
-          width: 20px;
-          height: 100%;
-          right: -04%;
-          top: 0;
-          background: $bg-color-blanco;
-        }
+        background: $color-verde;
+        color: $bg-color-blanco;
       }
     }
   }
@@ -98,7 +98,7 @@ $bg-color-gris: #cfcfcf;
 .header {
   padding: 0.5em 0.2em;
   position: relative;
-  
+
   margin-bottom: 0.5em;
   h2 {
     &::before {
@@ -129,8 +129,7 @@ $bg-color-gris: #cfcfcf;
   line-height: 1.35em;
   padding: 1em;
   border-radius: 12px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: $sombra-grande;
 }
 
 .resaltado {
@@ -169,7 +168,7 @@ $bg-color-gris: #cfcfcf;
 .light {
   font-weight: 300;
 }
-.container-wrap{
+.container-wrap {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -183,11 +182,9 @@ $bg-color-gris: #cfcfcf;
   margin: 1em 2em;
   height: 12em;
   width: 12em;
-  // box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-  //   rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  
+
+  box-shadow: $sombra-linea;
+
   .icon {
     height: 50%;
     img {
@@ -195,6 +192,36 @@ $bg-color-gris: #cfcfcf;
     }
   }
   p {
-    margin-bottom: 0.5em;
+    margin: 0.5em 0;
+  }
+}
+
+.post {
+  box-shadow: $sombra-linea;
+  margin: .75em 0;
+  // height: 24em;
+  width: 18em;
+  border-radius: 12px;
+  padding: 1em;
+  color: $text-color;
+  text-decoration: none;
+
+  .fecha-post {
+    font-size: .85em;
+    text-align: center;
+    margin-top: 0.75em;
+    background: $color-verde;
+    width: 55%;
+    border-radius: 25px;
+    padding: .45em;
+    color: $bg-color-blanco;
+  }
+  .titulo-post {
+    margin: 0.75em 0;
+    font-size: 1.25em;
+  }
+  .resumen-post {
+    
+    font-size: 1em;
   }
 }

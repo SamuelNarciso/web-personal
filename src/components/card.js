@@ -5,8 +5,8 @@ const Card = ({ icon, alt, titulo, texto }) => (
     <div className="icon">
       <img alt={alt} src={icon} />{' '}
     </div>
-    <p className="black"> {titulo} </p>
-    <p className="bold"> {texto} </p>
+    <p className="bold"> {titulo} </p>
+    <p className="regular"> {texto} </p>
   </div>
 );
 
