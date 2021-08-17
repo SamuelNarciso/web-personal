@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-const Post = ({ titulo, fecha, resumen, ruta }) => (
-  <Link className="post" to={ruta}>
+import Utils from '../utils/pageUtils';
+
+
+const Post = ({ titulo, fecha, resumen, ruta, imagen }) => (
+  <Link className="post" to={Utils.resolvePageUrl(ruta)}>
+    <img src={imagen}/>
+
     <h4 className='fecha-post'>
       {new Date(fecha).toLocaleDateString('en-gb', {
         year: 'numeric',

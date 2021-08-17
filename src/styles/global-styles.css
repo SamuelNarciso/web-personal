@@ -133,6 +133,36 @@ html {
   border-radius: 0 12px 12px 0;
 }
 
+@-webkit-keyframes nombre {
+  0% {
+    color: #f1f1f1;
+  }
+  50% {
+    color: #b3b3b3;
+  }
+  75% {
+    color: #858585;
+  }
+  100% {
+    color: #2d3047;
+  }
+}
+
+@keyframes nombre {
+  0% {
+    color: #f1f1f1;
+  }
+  50% {
+    color: #b3b3b3;
+  }
+  75% {
+    color: #858585;
+  }
+  100% {
+    color: #2d3047;
+  }
+}
+
 .parrafo {
   text-align: justify;
   line-height: 1.35em;
@@ -232,7 +262,7 @@ html {
 .post {
   -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
           box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  margin: .75em 0;
+  margin: 0.75em 0;
   width: 18em;
   border-radius: 12px;
   padding: 1em;
@@ -240,14 +270,23 @@ html {
   text-decoration: none;
 }
 
+.post img {
+  border-radius: 6px;
+  width: 100%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: ease-in-out filter .25s;
+  transition: ease-in-out filter .25s;
+}
+
 .post .fecha-post {
-  font-size: .85em;
+  font-size: 0.85em;
   text-align: center;
   margin-top: 0.75em;
   background: #419d78;
-  width: 55%;
-  border-radius: 25px;
-  padding: .45em;
+  width: 45%;
+  border-radius: 12px;
+  padding: 0.45em;
   color: #f1f1f1;
 }
 
@@ -258,5 +297,33 @@ html {
 
 .post .resumen-post {
   font-size: 1em;
+  color: #636468;
+}
+
+.post:hover {
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.post:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.blog-post-content h1, .blog-post-content h2, .blog-post-content h3, .blog-post-content h4, .blog-post-content h5, .blog-post-content h6 {
+  margin-top: 2rem;
+}
+
+.blog-post-content li, .blog-post-content p {
+  color: black;
+}
+
+.blog-post-content a {
+  color: #0d25da;
+  font-weight: 600;
+}
+
+.blog-post-content a :hover {
+  color: #0d25da;
 }
 /*# sourceMappingURL=global-styles.css.map */

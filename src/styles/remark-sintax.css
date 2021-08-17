@@ -1,0 +1,111 @@
+.container :not(pre) > code[class*="language-"] {
+    padding: .2em 0.8em;
+    border-radius: 2px;
+    font-weight: 500;
+    background-color: #657b83;
+    white-space: inherit;
+    font-family: inherit;
+    color: #5b6ac4;
+}
+.language-text {
+    background-color: rgba(27,31,35,0.06) !important;
+}
+.gatsby-highlight {
+    position: relative;
+}
+.gatsby-highlight::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    content: attr(data-language);
+    text-indent: 15px;
+}
+.gatsby-highlight[data-language="text"]::before, .gatsby-highlight[data-language="none"]::before {
+    display: none;
+}
+.gatsby-highlight pre {
+    overflow-x: auto;
+    overflow-y: hidden;
+    background-color: #282a36 !important;
+    box-shadow: rgba(0,0,0,0.55) 0px 6px 10px;
+    margin-bottom: 2rem;
+    font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
+}
+.gatsby-highlight pre code {
+    font-family: inherit;
+    line-height: 1.25em;
+    color: #50fa7b;
+    background-color: inherit;
+}
+.gatsby-highlight pre code .keyword {
+    color: #ff79c6;
+}
+.gatsby-highlight pre code .comment {
+    color: #999;
+}
+.gatsby-highlight pre code .punctuation {
+    color: white;
+}
+.gatsby-highlight pre code .string {
+    color: #f1fa8c;
+}
+.gatsby-highlight pre code .function {
+    color: #66d9ef;
+}
+.gatsby-highlight pre code .class-name {
+    color: white;
+}
+.gatsby-highlight pre code .builtin {
+    color: white;
+}
+.gatsby-highlight pre code .operator {
+    color: #ff79c6;
+}
+.gatsby-highlight pre code .number {
+    color: #bd93f9;
+}
+.gatsby-highlight pre .language-html .token.selector, .gatsby-highlight pre .language-html .token.attr-name, .gatsby-highlight pre .language-html .token.string, .gatsby-highlight pre .language-html .token.char, .gatsby-highlight pre .language-html .token.builtin, .gatsby-highlight pre .language-html .token.url, .gatsby-highlight pre .language-html .token.inserted {
+    color: #50fa7b;
+}
+.gatsby-highlight pre .language-html .token.property, .gatsby-highlight pre .language-html .token.tag, .gatsby-highlight pre .language-html .token.boolean, .gatsby-highlight pre .language-html .token.number, .gatsby-highlight pre .language-html .token.constant, .gatsby-highlight pre .language-html .token.symbol, .gatsby-highlight pre .language-html .token.deleted {
+    color: #ff79c6;
+}
+.gatsby-highlight pre .language-html .token.atrule, .gatsby-highlight pre .language-html .token.attr-value, .gatsby-highlight pre .language-html .token.keyword {
+    color: #f1fa8c;
+}
+.gatsby-highlight[data-language=html]::before {
+    color: #e34c26;
+    content: 'html';
+    text-align: end;
+    top: .7rem;
+    left: -1rem;
+}
+.gatsby-highlight[data-language=css]::before {
+    color: #563d7c;
+    content: 'css';
+    text-align: end;
+    top: .7rem;
+    left: -1rem;
+}
+.gatsby-highlight[data-language=javascript]::before {
+    color: #efbb35 ;
+    content: 'JS';
+    text-align: end;
+    top: .7rem;
+    left: -1rem;
+}
+.gatsby-highlight[data-language=typescript]::before {
+    color: #2b7489 ;
+    content: 'TS';
+    text-align: end;
+    top: .7rem;
+    left: -1rem;
+}
+.gatsby-highlight[data-language=php]::before {
+    color: #4F5D95 ;
+    content: 'php';
+    text-align: end;
+    top: .7rem;
+    left: -1rem;
+}

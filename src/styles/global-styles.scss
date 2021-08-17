@@ -98,8 +98,8 @@ $sombra-grande: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
 .header {
   padding: 0.5em 0.2em;
   position: relative;
-
   margin-bottom: 0.5em;
+  //  animation: nombre .35s ease-in-out ;
   h2 {
     &::before {
       position: absolute;
@@ -123,7 +123,20 @@ $sombra-grande: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     }
   }
 }
-
+@keyframes nombre {
+  0% {
+    color: #f1f1f1;
+  }
+  50% {
+    color: #b3b3b3;
+  }
+  75% {
+    color: #858585;
+  }
+  100% {
+    color: $text-color;
+  }
+}
 .parrafo {
   text-align: justify;
   line-height: 1.35em;
@@ -198,22 +211,27 @@ $sombra-grande: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
 
 .post {
   box-shadow: $sombra-linea;
-  margin: .75em 0;
-  // height: 24em;
+  margin: 0.75em 0;
   width: 18em;
   border-radius: 12px;
   padding: 1em;
   color: $text-color;
   text-decoration: none;
+  img {
+    border-radius: 6px;
+    width: 100%;
+    filter: grayscale(100%);
+    transition: ease-in-out filter .25s;
+  }
 
   .fecha-post {
-    font-size: .85em;
+    font-size: 0.85em;
     text-align: center;
     margin-top: 0.75em;
     background: $color-verde;
-    width: 55%;
-    border-radius: 25px;
-    padding: .45em;
+    width: 45%;
+    border-radius: 12px;
+    padding: 0.45em;
     color: $bg-color-blanco;
   }
   .titulo-post {
@@ -221,7 +239,30 @@ $sombra-grande: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     font-size: 1.25em;
   }
   .resumen-post {
-    
     font-size: 1em;
+    color: #636468;
+  }
+
+  &:hover {
+    box-shadow: $sombra-grande;
+    img{
+      filter: grayscale(0);
+    }
+  }
+}
+
+.blog-post-content{
+  h1, h2, h3, h4, h5, h6 {
+      margin-top: 2rem;
+    }
+  li, p{
+      color: black;
+  }
+  a{
+      color: #0d25da;
+      font-weight: 600;
+      :hover{
+          color: #0d25da;
+      }
   }
 }
