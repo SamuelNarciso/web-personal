@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   `);
   return (
     <div className="wrapper">
-      <div className="side">
+      <aside className="side">
         <div className="avatar">
           <img src={user} />
         </div>
@@ -30,14 +30,10 @@ const Layout = ({ children }) => {
         </h1>
         <Nav />
 
-        <div className="icons-social">
-          <img />
-        </div>
-      </div>
+        <div className="icons-social"></div>
+      </aside>
 
-      <div className="content">
-      {children}
-      </div>
+      <div className="content">{children}</div>
     </div>
   );
 };
