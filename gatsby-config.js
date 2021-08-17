@@ -28,6 +28,17 @@ module.exports = {
         gfm: true,
         plugins: [
           {
+            resolve: `gatsby-remark-classes`,
+            options: {
+              classMap: {
+                p:'parrafo',
+                h1: 'titulo',
+                h2: 'subtitulo',
+                code: 'gatsby-highlight'
+              }
+            }
+          },
+          {
             resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1000,

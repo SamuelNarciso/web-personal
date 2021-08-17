@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import Header from '../components/header';
 
-import  '../styles/remark-sintax.css';
+import '../styles/highlight-syntax.css';
 
 const obtenerPost = (data) => {
   const listaPosts = data.allMarkdownRemark.nodes;
@@ -22,18 +22,22 @@ const obtenerPost = (data) => {
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
 }) {
-
-   const { markdownRemark } = data; // data.markdownRemark holds your post data
-   const { frontmatter, html } = markdownRemark;
+  const { markdownRemark } = data; // data.markdownRemark holds your post data
+  const { frontmatter, html } = markdownRemark;
+  const imagen  = frontmatter.cover.childImageSharp.fluid.src
   // const { titulo, resumen, fecha, ruta, tags, imagen } = obtenerPost(data);
   // console.log(titulo)
   return (
-    <Layout className="blog-post-container">
-      <Header titulo={ frontmatter.title } />
-      <div className="blog-post container">
-        <h2>{frontmatter.date}</h2>
-        <div
-          className="blog-post-content "
+    <Layout>
+      <Header titulo={frontmatter.title} />
+        <div className='imagen-post'>
+      <img src={imagen} alt={frontmatter.title} />
+        </div>
+      <div className="post-articulo">
+        <h2 className="fecha-post">{frontmatter.date}</h2>
+
+        <article
+          className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </div>
@@ -42,13 +46,21 @@ export default function Template({
 }
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query ($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         tags
         title
+        cover {
+          childImageSharp {
+            fluid(maxWidth: 1000) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
       }
     }
-  }`;
+  }
+`;
