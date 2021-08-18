@@ -5,34 +5,16 @@ import Header from '../components/header';
 
 import '../styles/highlight-syntax.css';
 
-const obtenerPost = (data) => {
-  const listaPosts = data.allMarkdownRemark.nodes;
-
-  // console.log( listaPosts )
-  return listaPosts.map((post) => ({
-    titulo: post.frontmatter.title,
-    resumen: post.frontmatter.excerpt,
-    fecha: post.frontmatter.date,
-    ruta: post.frontmatter.path,
-    tags: post.frontmatter.tags,
-    imagen: post.frontmatter.cover.childImageSharp.fluid.src,
-  }));
-};
-
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  const { markdownRemark } = data; // data.markdownRemark holds your post data
+export default function Template({ data }) {
+  const { markdownRemark } = data; 
   const { frontmatter, html } = markdownRemark;
-  const imagen  = frontmatter.cover.childImageSharp.fluid.src
-  // const { titulo, resumen, fecha, ruta, tags, imagen } = obtenerPost(data);
-  // console.log(titulo)
+  const imagen = frontmatter.cover.childImageSharp.fluid.src;
   return (
     <Layout>
       <Header titulo={frontmatter.title} />
-        <div className='imagen-post'>
-      <img src={imagen} alt={frontmatter.title} />
-        </div>
+      <div className="imagen-post">
+        <img src={imagen} alt={frontmatter.title} />
+      </div>
       <div className="post-articulo">
         <h2 className="fecha-post">{frontmatter.date}</h2>
 

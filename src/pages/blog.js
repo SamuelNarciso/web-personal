@@ -1,31 +1,32 @@
 import React from 'react';
-import { graphql, Link, StaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
+import { v4 as uuid} from 'uuid';
 
 import Layout from '../components/layout';
 import Header from '../components/header';
 import Post from '../components/post';
 
-const obtenerPost = (data) => {
-  const listaPosts = data.allMarkdownRemark.nodes;
-
-  // console.log( listaPosts )
-  return listaPosts.map((post) => ({
+const obtenerPost = (data) =>
+  data.allMarkdownRemark.nodes.map((post) => ({
     titulo: post.frontmatter.title,
     resumen: post.frontmatter.excerpt,
     fecha: post.frontmatter.date,
     ruta: post.frontmatter.path,
     tags: post.frontmatter.tags,
     imagen: post.frontmatter.cover.childImageSharp.fluid.src,
+    id: uuid()
   }));
-};
 
 const blog = ({ data }) => {
+  const posts = obtenerPost(data);
   return (
     <Layout>
       <Header titulo="Blog" />
+      <div className="opciones"></div>
       <div className="container-wrap">
-        {obtenerPost(data).map((post) => (
+        {posts.map((post) => (
           <Post
+            key={post.id}
             imagen={post.imagen}
             titulo={post.titulo}
             fecha={post.fecha}
@@ -43,7 +44,7 @@ export const query = graphql`
   {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fileAbsolutePath: { regex: "/index.md$/" } }
+      filter: { fileAbsolutePath: { regex: "/(content)/" } }
     ) {
       nodes {
         frontmatter {
