@@ -351,7 +351,9 @@ nav ul {
       }
     }
   }
-
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
   @media screen and (max-width: 1202px) {
     ul{
       margin: 0;

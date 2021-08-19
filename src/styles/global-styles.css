@@ -435,6 +435,12 @@ nav ul a li:hover {
   display: none;
 }
 
+@media screen and (min-width: 800px) {
+  .menu-mobil {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 1202px) {
   .menu-mobil ul {
     margin: 0;
