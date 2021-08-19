@@ -47,25 +47,22 @@ const IndexPage = ({ data }) => (
           titulo="Cocinar"
           texto=""
         />
-        <Card
-          icon={coding}
-          alt="Aficionado a la programacion"
-          titulo="Programar"
-          texto=""
-        />
-        <Card
-          icon={libros}
-          alt="Estudiar como pasatiempo"
-          titulo="Estudiar"
-          texto=""
-        />
-        <Card
+          <Card
           icon={correr}
           alt="Correr como pasatiempo"
           titulo="Correr"
           texto=""
         />
    
+         <Card
+          icon={libros}
+          alt="Estudiar como pasatiempo"
+          titulo="Estudiar"
+          texto=""
+        />
+       
+       
+      
         <Card
           icon={gamepad}
           alt="Aficionado a los videojuegos"
@@ -78,7 +75,12 @@ const IndexPage = ({ data }) => (
           titulo="Nadar"
           texto=""
         />
-   
+    <Card
+          icon={coding}
+          alt="Aficionado a la programacion"
+          titulo="Programar"
+          texto=""
+        />
       </div>
       {/* <h3 className="subtitulo bold t-left">Tecnologias con las que he trabajado</h3> */}
     </Layout>
