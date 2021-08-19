@@ -283,6 +283,7 @@ nav ul {
   align-items: center;
   justify-content: center;
   img {
+    box-shadow: $sombra-linea;
     border-radius: 12px;
     width: 80%;
   }

@@ -1,6 +1,6 @@
 ---
 title: Panel de control de redes sociales
-tags: [sass, html, javascript ]
+tags: [sass, html, javascript]
 date: 2021-04-11T05:25:44.226Z
 path: proyectos/panel-de-control-de-redes-sociales
 cover: ./dashboard.png
@@ -9,12 +9,14 @@ excerpt: Esta es una solicion de un reto puesto en la pagina de frontendmentor, 
 
 # Frontend Mentor - Social media dashboard with theme switcher solution
 
-Esta es una solucion al reto de [Social media dashboard with theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H). Frontend Mentor retos que ayudan a mejorar las habilidades de coding y construir proyectos realistas
+### Links
 
-
-
+- Repositorio URL : [Github](https://github.com/SamuelNarciso/social-media-dashboard)
+- Demo URL : [GitHub-Pages](https://samuelnarciso.github.io/social-media-dashboard/)
 
 ## General
+
+Esta es una solucion al reto de [Social media dashboard with theme switcher challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H). Frontend Mentor retos que ayudan a mejorar las habilidades de coding y construir proyectos realistas
 
 ### El reto
 
@@ -26,49 +28,42 @@ Los usuarios deberian poder
 
 ### Screenshot
 
-![dashboard](./dashboard.png)
-
-
-### Links
-- Repositorio URL : [Github](https://github.com/SamuelNarciso/social-media-dashboard)
-- Demo URL : [GitHub-Pages](https://samuelnarciso.github.io/social-media-dashboard/)
+![](./dashboard.png)
 
 ## Mi proceso
 
 ### Construido con
 
 - HTML5
-- CSS 
-- Sass 
+- CSS
+- Sass
 - Flexbox
 - media queries
-- javascript 
-
+- javascript
 
 ### Que aprendi?
 
-Aprendi como modificar un checkbox con css, organizar mediante flexbox y como hacer un cambio de colores en la vista utilizando 
+Aprendi como modificar un checkbox con css, organizar mediante flexbox y como hacer un cambio de colores en la vista utilizando
 solamente css y javascript
 
 Como cambiar los colores de forma facil con Javascript y CSS
 
 ```scss
-$white: #1e202a ;
-$dark: #ffffff ;
-body{
-  background: $white ;
-  color:$dark ;
+$white: #1e202a;
+$dark: #ffffff;
+body {
+  background: $white;
+  color: $dark;
 
-&.dark :{
-  color:$white ;
-  background: $dark ;
+  &.dark : {
+    color: $white;
+    background: $dark;
   }
 }
 ```
+
 ```javascript
-
-  document.querySelector('body').classlist.toggle('dark')
-
+document.querySelector('body').classlist.toggle('dark');
 ```
 
 ### Recursos utilies
@@ -83,4 +78,3 @@ body{
 - Instagram - [Samuel_Narciso](https://www.instagram.com/samuel_narciso/)
 - Twitter - [SamuelNarciso28](https://twitter.com/SamuelNarciso28)
 - Youtube - [SamuelNarciso](https://www.youtube.com/channel/UCdlswAjW13BPfV9jo5VLJnQ)
-
