@@ -244,6 +244,7 @@ nav ul {
   color: $text-color;
   text-decoration: none;
   img {
+    box-shadow: $sombra-linea;
     border-radius: 6px;
     width: 100%;
     filter: grayscale(100%);
@@ -335,7 +336,7 @@ nav ul {
       text-align: justify;
       line-height: 1.75;
     }
-    ol {
+    ol, ul {
       padding-left: 1.5em;
       li {
         margin: 0.75em 0;

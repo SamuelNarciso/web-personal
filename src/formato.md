@@ -1,17 +1,39 @@
 ---
-title: Props de react chidas y bien explicadas.
-tags: [reactjs ]
-date: 2020-05-21T05:25:44.226Z
-path: blog/Props-de-react-chidas-y-bien-explicadas
-cover: ./props.png
-excerpt: Las propiedades o por la forma mas común **props** es la manera de enviar datos a los componentes, pasándolos por parámetros.
+title: Todo list
+tags: [css, html, javascript ]
+date: 2020-05-13T05:25:44.226Z
+path: proyectos/todo-list
+cover: ./index.png
+excerpt: En esta practica realice un todo list el cual utiliza local storage para almacenar los distintos todos que el usuario registra.
 ---
-# Titulo
-## Subtitulo
+# Todo list utilizando local storage
 
-Parrafos
 
-```js
-codigo
-```
+## General
+  ### El reto
+  
+  RETO:
+  -
+  -
+  -
 
+  ### Screenshot
+  ![ALT IMAGEN](./index.png)
+  ### Links
+- Repositorio URL : [Github]( )
+- Demo URL : [GitHub-Pages]( )
+
+## Mi proceso
+
+  ### Construido con
+  ### Que aprendi?
+  ### Recursos utilies
+  - [Pagina]( ) - descripcion
+
+
+## Autor
+
+  - Github - [SamuelNarciso](https://github.com/SamuelNarciso)
+  - Instagram - [Samuel_Narciso](https://www.instagram.com/samuel_narciso/)
+  - Twitter - [SamuelNarciso28](https://twitter.com/SamuelNarciso28)
+  - Youtube - [SamuelNarciso](https://www.youtube.com/channel/UCdlswAjW13BPfV9jo5VLJnQ)

@@ -311,6 +311,8 @@ nav ul a li:hover {
 }
 
 .post img {
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   border-radius: 6px;
   width: 100%;
   -webkit-filter: grayscale(100%);
@@ -419,11 +421,11 @@ nav ul a li:hover {
   line-height: 1.75;
 }
 
-.post-articulo .blog-post-content ol {
+.post-articulo .blog-post-content ol, .post-articulo .blog-post-content ul {
   padding-left: 1.5em;
 }
 
-.post-articulo .blog-post-content ol li {
+.post-articulo .blog-post-content ol li, .post-articulo .blog-post-content ul li {
   margin: 0.75em 0;
 }
 
