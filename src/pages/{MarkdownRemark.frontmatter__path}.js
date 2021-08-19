@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import Header from '../components/header';
 
 import '../styles/highlight-syntax.css';
+import { v4 } from 'uuid';
 
 export default function Template({ data }) {
   const { markdownRemark } = data; 
@@ -19,7 +20,7 @@ export default function Template({ data }) {
       </div>
       <div className="post-articulo">
         <h2 className="fecha-post">{frontmatter.date}</h2>
-    <h3> {frontmatter.tags.map( tag => <p className='tag-post '> {tag} </p> )} </h3>
+    <h3> {frontmatter.tags.map( tag => <p className='tag-post ' key={v4()}> {tag} </p> )} </h3>
         <article
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}

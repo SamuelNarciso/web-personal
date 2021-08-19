@@ -1,10 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { v4 as uuid} from 'uuid';
+import { v4 as uuid } from 'uuid';
 
 import Layout from '../components/layout';
 import Header from '../components/header';
 import Post from '../components/post';
+import Seo from '../components/seo';
 
 const obtenerPost = (data) =>
   data.allMarkdownRemark.nodes.map((post) => ({
@@ -14,13 +15,17 @@ const obtenerPost = (data) =>
     ruta: post.frontmatter.path,
     tags: post.frontmatter.tags,
     imagen: post.frontmatter.cover.childImageSharp.fluid.src,
-    id: uuid()
+    id: uuid(),
   }));
 
 const blog = ({ data }) => {
   const posts = obtenerPost(data);
   return (
     <Layout>
+      <Seo
+        title="blog"
+        description="en este apartado se encuentran distintos post de mi blog personal"
+      />
       <Header titulo="Blog" />
       <div className="opciones"></div>
       <div className="container-wrap">

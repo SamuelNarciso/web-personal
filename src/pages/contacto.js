@@ -9,10 +9,12 @@ import youtube from '../images/svg/social/youtube.svg'
 import github from '../images/svg/social/github.svg'
 import instagram from '../images/svg/social/instagram.svg'
 import twitter from '../images/svg/social/twitter.svg'
+import Seo from '../components/seo';
 
 
 const contacto = () => {
   return <Layout>
+    <Seo title='contacto' description='en esta pagina podemos encontrar las distintas formas por las que te puedes poner en contacto mediante mis redes sociales.' />
  <Header titulo="Contacto" />
   <div className='container-wrap'>
   <Card  titulo='Github' texto='SamuelNarciso' icon={github} alt='Cuenta de github SamuelNarciso'/>

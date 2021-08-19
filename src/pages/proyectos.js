@@ -5,6 +5,7 @@ import { v4 as uuid } from 'uuid';
 import Layout from '../components/layout';
 import Header from '../components/header';
 import Post from '../components/post';
+import Seo from '../components/seo';
 
 const obtenerProyectos = (data) =>
   data.allMarkdownRemark.nodes.map((post) => ({
@@ -22,6 +23,10 @@ const proyectos = ({ data }) => {
 
   return (
     <Layout>
+       <Seo
+        title="blog"
+        description="en este apartado se encuentran distintos proyectos que he realizado"
+      />
       <Header titulo="Proyectos" />
       <div className='container-wrap'>
       {proyectos.map((proyecto) => (
