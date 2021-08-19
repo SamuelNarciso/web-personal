@@ -24,7 +24,7 @@ const proyectos = ({ data }) => {
   return (
     <Layout>
        <Seo
-        title="blog"
+        title="proyectos"
         description="en este apartado se encuentran distintos proyectos que he realizado"
       />
       <Header titulo="Proyectos" />
