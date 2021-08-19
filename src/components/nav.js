@@ -8,13 +8,14 @@ import {
   CodeSandboxOutlined,
 } from '@ant-design/icons';
 
-const Nav = () => (
-  <div className="nav">
+const Nav = ({clase}) => (
+ 
+  <nav className={clase ||''} >
     <ul>
       <Link className="bold " to="/">
         <li>
           <SmileOutlined className="icon" />
-          Acerca de
+          Acerca
         </li>
       </Link>
       <Link className="bold " to="/blog">
@@ -36,7 +37,7 @@ const Nav = () => (
         </li>
       </Link>
     </ul>
-  </div>
+  </nav>
 );
 
 export default Nav;

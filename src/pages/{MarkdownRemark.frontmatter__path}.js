@@ -9,6 +9,8 @@ export default function Template({ data }) {
   const { markdownRemark } = data; 
   const { frontmatter, html } = markdownRemark;
   const imagen = frontmatter.cover.childImageSharp.fluid.src;
+  
+
   return (
     <Layout>
       <Header titulo={frontmatter.title} />
@@ -17,7 +19,7 @@ export default function Template({ data }) {
       </div>
       <div className="post-articulo">
         <h2 className="fecha-post">{frontmatter.date}</h2>
-
+    <h3> {frontmatter.tags.map( tag => <p className='tag-post '> {tag} </p> )} </h3>
         <article
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
@@ -37,7 +39,7 @@ export const pageQuery = graphql`
         title
         cover {
           childImageSharp {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 400) {
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }
