@@ -13,8 +13,8 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-gatsby-cloud`,
-    
     `gatsby-transformer-remark`,
+    `gatsby-plugin-sass`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {

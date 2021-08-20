@@ -7,10 +7,10 @@ const Autor = () => (
       <img src={user} alt="creador de la pagina web Samuel Narciso" />
     </div>
 
-    <h1 className="titulo t-center">
+    <h2 className="subtitulo t-center">
       <span className="bold"> Samuel </span>
       <span className="regular"> Narciso </span>
-    </h1>
+    </h2>
   </div>
 );
 

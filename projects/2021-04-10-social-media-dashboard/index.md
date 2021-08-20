@@ -4,7 +4,7 @@ tags: [sass, html, javascript]
 date: 2021-04-11T05:25:44.226Z
 path: proyectos/panel-de-control-de-redes-sociales
 cover: ./dashboard.png
-excerpt: Esta es una solicion de un reto puesto en la pagina de frontendmentor, el cual consiste en crear una pagina web que simule ser un panel de control el cual muestre datos de distintas redes sociales.
+excerpt: Esta es una solucion de un reto puesto en la pagina de frontendmentor, el cual consiste en crear una pagina web que simule ser un panel de control el cual muestre datos de distintas redes sociales.
 ---
 
 # Frontend Mentor - Social media dashboard with theme switcher solution

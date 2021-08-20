@@ -39,7 +39,7 @@ const IndexPage = ({ data }) => (
         Cuautla.
       </p>
       <br/>
-    <p className='titulo'> Aficiones y pasatiempos </p>
+    <p className='subtitulo'> Aficiones y pasatiempos </p>
       <div className="container-wrap">
         <Card
           icon={cocina}
