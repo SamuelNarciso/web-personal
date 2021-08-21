@@ -11,16 +11,18 @@
 p {
   font-size: 16px;
 }
+
 .parrafo {
   text-align: left;
   line-height: 1.5em;
   padding: 1em;
   border-radius: 12px;
-  box-shadow: $sombra-grande;
+  box-shadow: $sombra-delgada;
 }
 
-.resaltado {
-   
+.texto-link {
+   color: $color-azul;
+   text-decoration: none;
 }
 
 .t-left {
