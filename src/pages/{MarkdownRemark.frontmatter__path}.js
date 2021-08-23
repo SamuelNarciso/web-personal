@@ -9,7 +9,7 @@ import { v4 } from 'uuid';
 export default function Template({ data }) {
   const { markdownRemark } = data; 
   const { frontmatter, html } = markdownRemark;
-  const imagen = frontmatter.cover.childImageSharp.fluid.src;
+  const imagen = frontmatter.coverPage.childImageSharp.fluid.src;
   
 
   return (
@@ -38,9 +38,9 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         tags
         title
-        cover {
+        coverPage {
           childImageSharp {
-            fluid(maxWidth: 400) {
+            fluid(maxWidth: 1000) {
               ...GatsbyImageSharpFluid_tracedSVG
             }
           }

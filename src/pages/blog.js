@@ -14,7 +14,7 @@ const obtenerPost = (data) =>
     fecha: post.frontmatter.date,
     ruta: post.frontmatter.path,
     tags: post.frontmatter.tags,
-    imagen: post.frontmatter.cover.childImageSharp.fluid.src,
+    imagen: post.frontmatter.coverCard.childImageSharp.fluid.src,
     id: uuid(),
   }));
 
@@ -58,9 +58,9 @@ export const query = graphql`
           date
           excerpt
           tags
-          cover {
+          coverCard {
             childImageSharp {
-              fluid(maxWidth: 288) {
+              fluid(maxWidth: 500) {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
             }

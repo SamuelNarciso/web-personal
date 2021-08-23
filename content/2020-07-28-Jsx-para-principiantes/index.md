@@ -3,7 +3,8 @@ title: JSX para principiantes
 tags: [ reactjs ]
 date: 2020-05-21T05:25:44.226Z
 path: blog/jsx-para-principiantes
-cover: ./jsx-portada.jpg
+coverCard: ./coverCard.png
+coverPage: ./coverPage.png
 excerpt: JSX es un pseudolenguaje que facilita el desarrollo de aplicaciones web por su sintaxis similar a las etiquetas de HTML. Este cuenta con su propia sintaxis, la cuál extiende de Javascript , el cuál se usa en react para describir la interfaz de usuario
 
 ---

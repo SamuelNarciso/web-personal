@@ -3,7 +3,8 @@ title: Todo list y local storage
 tags: [css, html, javascript]
 date: 2020-05-13T05:25:44.226Z
 path: proyectos/todo-list
-cover: ./index.png
+coverCard: ./coverCard.png
+coverPage: ./coverPage.png
 excerpt: En esta practica realice un todo list el cual utiliza local storage para almacenar los distintos todos que el usuario registra.
 ---
 
