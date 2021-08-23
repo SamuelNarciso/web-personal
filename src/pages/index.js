@@ -19,41 +19,48 @@ const IndexPage = ({ data }) => (
       <Seo title="Home" />
       <Header titulo="Acerca de" />
       <p className="regular parrafo">
-        Hola ✋. Me llamo <span className="bold"> Samuel Narciso </span> , soy
-        un desarrollador web orientado al frontend, apasionado a distintas
-        tecnologias de desarrollo.
+        Hola ✋. Me llamo <span className="bold"> Samuel Narciso </span>, soy
+        estudiante de séptimo semestre de ingeniería en sistemas computacionales
+        en el Tecnológico Nacional de México.
+        <br />
+        Me considero un apasionado por la tecnología y la programación.
+        <br />
+        El área de desarrollo que más me gusta es el desarrollo web, más
+        específicamente el front-end.
       </p>
       <p className="regular parrafo">
-        Me gusta experimentar o jugar con distintas tecnologias asi como
-        aprender cosas nuevas sobre ellas, la experiencia actual con la que
-        cuento es con proyectos que he realizado en la escuela y algunos que he
-        realizado por cuenta propia.
-      </p>
-      <p className="regular parrafo">
-        Me gusta crear contenido y de esta manera enseñar a otros
-        desarrolladores, mediante {' '}
-        <Link className="bold texto-link" to="/blog">
-          post en mi blog {' '}
+        La experiencia con la que cuento actualmente es por proyectos que he
+        realizado, ya sea para la escuela o por el mero gusto de practicar lo
+        que estoy aprendiendo, algunos de dichos proyectos se encuentran en mi
+        apartado de{' '}
+        <Link className="bold texto-link" to="/proyectos">
+          {' '}
+          proyectos{' '}
         </Link>
-         o 
+        , de esta misma página, en ellos se pueden notar las distintas
+        tecnologías con las que he trabajado, tales como HTML, CSS, Sass,
+        Javascript, React js, Node js, Git.
+      </p>
+      <p className="regular parrafo">
+        Quiero seguir aprendiendo aún más, y documentar ese proceso, ya sea
+        mediante o y de esta manera poder ayudar a otras personas. Me gusta
+        crear contenido y de esta manera enseñar a otros desarrolladores,
+        mediante{' '}
         <a
           className="bold texto-link"
           href="https://www.youtube.com/channel/UCdlswAjW13BPfV9jo5VLJnQ"
           alt="canal de youtube samuel narciso"
         >
-           {' '}videos de youtube
+          {' '}
+          videos en mí canal de YouTube{' '}
         </a>
-        .
-      </p>
-      <p className="regular parrafo">
-        Con las tecnologias que me siento comodo trabajando es con tecnologias
-        de Javascript tales como react y NodeJS.
+        o
+        <Link className="bold texto-link" to="/blog">
+          {' '}
+          post en mi blog{' '}
+        </Link>
       </p>
 
-      <p className="regular parrafo">
-        Actualmente estoy estudiando una ingenieria en sistemas computacionales
-        en el instituto tecnologico nacional de México campus Cuautla.
-      </p>
       <br />
       <p className="subtitulo"> Aficiones y pasatiempos </p>
       <div className="container-wrap">

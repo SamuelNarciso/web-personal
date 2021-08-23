@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Samuel N.`,
-    description: `Testeo con gartsby para crear un blog`,
+    description: `Pagina web personal.`,
     author: `SamuelNarciso`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `samuelnarciso.tk`,
   },
   
   plugins: [
