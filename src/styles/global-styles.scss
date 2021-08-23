@@ -81,7 +81,7 @@ nav ul {
     li {
       padding: 0.5em 0;
       position: relative;
-      border-radius: 24px;
+      border-radius: 6px;
       font-size: 1em;
       display: flex;
       flex-wrap: wrap;
@@ -98,6 +98,7 @@ nav ul {
         color: $bg-color-blanco;
       }
     }
+  
   }
 }
 
@@ -301,10 +302,15 @@ nav ul {
       .icon {
         display: none;
       }
+      li{
+        margin: 0 12px;
+        border-radius: 0;
+        border-bottom: 3px $bg-color-blanco solid; //TODO: Borrar esta linea, es solo para el desarrollo.
+      }
       li:hover {
         color: $color-negro;
         background: none;
-        text-decoration: underline;
+        border-bottom: 3px $color-verde solid; //TODO: Borrar esta linea, es solo para el desarrollo.
       }
     }
   }
