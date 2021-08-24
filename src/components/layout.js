@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
     <div className="wrapper">
       <aside >
         <Autor />
-        <Nav />
+         <Nav />
       </aside>
 
       <div className="content">
