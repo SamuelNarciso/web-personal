@@ -29,7 +29,7 @@ Los usuarios deberian poder
 
 ### Screenshot
 
-![](./dashboard.png)
+![](./coverPage.png)
 
 ## Mi proceso
 

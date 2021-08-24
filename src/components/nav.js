@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Link } from 'gatsby';
+import Autor from './autor';
 import {
   SmileOutlined,
   EditOutlined,
@@ -8,29 +9,29 @@ import {
   CodeSandboxOutlined,
 } from '@ant-design/icons';
 
-const Nav = ({clase}) => (
- 
-  <nav className={clase ||''} >
+const Nav = ({ clase }) => (
+  <nav className={clase || ''}>
+    <Autor />
     <ul>
-      <Link className="bold " to="/">
+      <Link className="regular " to="/">
         <li>
           <SmileOutlined className="icon" />
           Acerca
         </li>
       </Link>
-      <Link className="bold " to="/blog">
+      <Link className="regular " to="/blog">
         <li>
           <EditOutlined className="icon" />
           Blog
         </li>
       </Link>
-      <Link className="bold " to="/contacto">
+      <Link className="regular " to="/contacto">
         <li>
           <ContactsOutlined className="icon" />
           Contacto
         </li>
       </Link>
-      <Link className="bold " to="/proyectos">
+      <Link className="regular " to="/proyectos">
         <li>
           <CodeSandboxOutlined className="icon" />
           Proyectos

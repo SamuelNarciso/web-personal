@@ -13,25 +13,25 @@ export default function Template({ data }) {
 
   return (
     <Layout>
-      <Header titulo={frontmatter.title} />
-      <div className="imagen-post">
+      <div className="imagen-articulo">
         <img src={imagen} alt={frontmatter.title} /> 
       </div>
-      <div className="post-articulo">
-        <h2 className="fecha-post">{frontmatter.date}</h2>
+      <Header titulo={frontmatter.title} />
+      <article className="articulo">
+        <h2 className="fecha-articulo">{frontmatter.date}</h2>
         <h3>
           {frontmatter.tags.map((tag) => (
-            <p className="tag-post " key={v4()}>
+            <p className="tag-articulo " key={v4()}>
               {' '}
               {tag}{' '}
             </p>
           ))}{' '}
         </h3>
-        <article
-          className="blog-post-content"
+        <section
+          className="contenido-articulo"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-      </div>
+      </article>
     </Layout>
   );
 }

@@ -33,7 +33,7 @@ Los usuarios deberian poder
 
 ### Screenshot
 
-![](./index.png)
+![](./coverPage.png)
 
 ## Mi proceso
 

@@ -14,17 +14,17 @@
 }
 
 @media screen and (max-width: 800px) {
-  .content {
+  .layout-section {
     grid-area: contenido;
   }
-  .wrapper {
+  .layout {
     grid-template-columns: 100%;
     grid-template-areas: 'contenido';
   }
   aside {
     display: none;
   }
-  .post {
+  .card-articulo {
     width: 100%;
   }
 }

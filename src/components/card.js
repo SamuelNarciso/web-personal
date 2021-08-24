@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Card = ({ icon, alt, titulo, texto }) => (
-  <div className="card">
+  <div className="card-simple">
     <div className="icon">
       <img alt={alt} src={icon} />{' '}
     </div>

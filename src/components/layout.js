@@ -4,21 +4,20 @@ import PropTypes from 'prop-types';
 import '../styles/global-styles.scss';
 import Nav from './nav';
 
-import Autor from './autor';
+
 
 const Layout = ({ children }) => {
   return (
-    <div className="wrapper">
+    <main className="layout">
       <aside >
-        <Autor />
          <Nav />
       </aside>
 
-      <div className="content">
+      <section className="layout-section">
         <Nav  clase="menu-mobil " />
         {children}
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

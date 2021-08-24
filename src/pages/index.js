@@ -14,7 +14,6 @@ import swim from '../images/svg/icons/swim.svg';
 import { Link } from 'gatsby';
 
 const IndexPage = ({ data }) => (
-  <>
     <Layout>
       <Seo title="Home" />
       <Header titulo="Acerca de" />
@@ -104,7 +103,7 @@ const IndexPage = ({ data }) => (
         />
       </div>
     </Layout>
-  </>
+  
 );
 
 export default IndexPage;
