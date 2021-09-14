@@ -1,5 +1,5 @@
 ---
-title: Todo list y local storage
+title: To-do list y local storage
 tags: [css, html, javascript]
 date: 2020-05-13T05:25:44.226Z
 path: proyectos/todo-list

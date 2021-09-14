@@ -267,7 +267,7 @@ nav ul {
     }
     li,
     p {
-      color: #1b1b1b;
+      color: $negro;
       font-size: 1.05em;
     }
     p {
@@ -289,6 +289,25 @@ nav ul {
       &:hover {
         text-decoration: underline;
         background: #98d6ff;
+      }
+    }
+    table{
+      border-collapse: collapse;
+      th{
+        font-size: 1.25em;
+        border-bottom: 2px solid #cecece;
+      }
+      tr{
+        td{
+          margin: 6px;
+          font-size: 1.15em;
+          padding: 6px;
+
+        }
+        &:nth-child(even){
+
+          background: #cececeaf;
+        }
       }
     }
   }
