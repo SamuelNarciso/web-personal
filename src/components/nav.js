@@ -11,7 +11,8 @@ import {
 
 const Nav = ({ clase }) => (
   <nav className={clase || ''}>
-    <Autor />
+    {clase ? null : <Autor />}
+
     <ul>
       <Link className="regular " to="/">
         <li>
