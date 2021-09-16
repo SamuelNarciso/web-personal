@@ -41,10 +41,8 @@ const IndexPage = ({ data }) => (
         Javascript, React js, Node js, Git.
       </p>
       <p className="regular parrafo">
-        Quiero seguir aprendiendo aún más, y documentar ese proceso, ya sea
-        mediante o y de esta manera poder ayudar a otras personas. Me gusta
-        crear contenido y de esta manera enseñar a otros desarrolladores,
-        mediante{' '}
+        Quiero seguir aprendiendo aún más, y documentar ese proceso,
+        con{' '}
         <a
           className="bold texto-link"
           href="https://www.youtube.com/channel/UCdlswAjW13BPfV9jo5VLJnQ"
