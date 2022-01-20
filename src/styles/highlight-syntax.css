@@ -29,7 +29,7 @@
 .gatsby-highlight pre {
   overflow-x: auto;
   overflow-y: hidden;
-  background-color: #282a36 !important;
+  background-color: #212236 !important;
   box-shadow: rgba(0,0,0,0.55) 0px 6px 10px;
   margin-bottom: 2rem;
   font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace !important;
@@ -91,14 +91,14 @@
   top: .7rem;
   left: -1rem;
 }
-.gatsby-highlight[data-language=javascript]::before {
+.gatsby-highlight[data-language=js]::before {
   color: #efbb35 ;
   content: 'JS';
   text-align: end;
   top: .7rem;
   left: -1rem;
 }
-.gatsby-highlight[data-language=typescript]::before {
+.gatsby-highlight[data-language=ts]::before {
   color: #2b7489;
   content: 'TS';
   text-align: end;
@@ -120,8 +120,8 @@ code[data-langugage=text]::before{
 	position: relative;
 	padding: .2em;
 	border-radius: 0.3em;
-	color: #6835c7;
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	color: #c1a0ff;
+	border: 1px solid rgba(164, 118, 251, 0.322);
 	display: inline;
 	white-space: normal;
 }

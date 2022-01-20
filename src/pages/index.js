@@ -13,10 +13,14 @@ import gamepad from '../images/svg/icons/gamepad.svg';
 import swim from '../images/svg/icons/swim.svg';
 import { Link } from 'gatsby';
 
-const IndexPage = ({ data }) => (
-    <Layout>
+const IndexPage = ({ data }) => {
+
+
+  return (
+    <Layout >
       <Seo title="Home" />
       <Header titulo="Acerca de" />
+
       <p className="regular parrafo">
         Hola ✋. Me llamo <span className="bold"> Samuel Narciso </span>, soy
         estudiante de séptimo semestre de ingeniería en sistemas computacionales
@@ -33,7 +37,6 @@ const IndexPage = ({ data }) => (
         que estoy aprendiendo, algunos de dichos proyectos se encuentran en mi
         apartado de{' '}
         <Link className="bold texto-link" to="/proyectos">
-          {' '}
           proyectos{' '}
         </Link>
         , de esta misma página, en ellos se pueden notar las distintas
@@ -41,8 +44,7 @@ const IndexPage = ({ data }) => (
         Javascript, React js, Node js, Git.
       </p>
       <p className="regular parrafo">
-        Quiero seguir aprendiendo aún más, y documentar ese proceso,
-        con{' '}
+        Quiero seguir aprendiendo aún más, y documentar ese proceso, con{' '}
         <a
           className="bold texto-link"
           href="https://www.youtube.com/channel/UCdlswAjW13BPfV9jo5VLJnQ"
@@ -101,7 +103,7 @@ const IndexPage = ({ data }) => (
         />
       </div>
     </Layout>
-  
-);
+  );
+};
 
 export default IndexPage;

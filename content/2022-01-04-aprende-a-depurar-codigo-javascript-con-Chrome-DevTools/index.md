@@ -14,6 +14,9 @@ La depuración de código es una de las partes fundamentales de programar, cuand
 Todos los exploradores actuales cuentan con una herramienta especializada en la funcion de depuracion y no muchos la usan, sin embargo en este post me propongo explicarte de forma sencilla, clara y mediante un ejemplo como es que la puedes utilizar y sacarle todo el jugo a tan poderosa herramienta.
 
 *En este post estaré utilizando Chrome, sin embargo no dudo que el conocimiento se pueda aplicar a cualquier otro navegador.*
+
+
+
 ### Manos a la obra
 Comencemos con un programa sencillo, pero si no quieres hacerlo puedes utilizar el [ejemplo de google](https://googlechrome.github.io/devtools-samples/debug-js/get-started).
 
@@ -77,7 +80,9 @@ Coloca un par de números en cada campo, y presiona el botón de sumar y observa
 Claramente tenemos un error ⚠ 
 Este sencillo ejemplo nos ayudara.
 
+
 #### Familiarizándonos con el panel de herramientas de desarrollador
+
 El panel de herramientas de desarrollador o también conocido como las DevTools, es quien nos ayudará a la hora de depurar código u otras acciones más que deseemos realizar.
 
 Para abrir este panel existen distintas formas.
@@ -102,7 +107,7 @@ Lo que nos interesa es el apartado superior que dice `sources | recursos`, lo pr
 
 Identifiquemos cada panel:
 
-![Figura 5. Paneles numerados](panleRecursosNumerado.png)
+![Figura 5. Paneles numerados.](panleRecursosNumerado.png)
 
 1. **Panel de archivos** muestra el servidor que corre la página, la carpeta raiz y  los archivos HTML, CSS y JavaScript y otros más incluidos en la Página que estemos viendo.
 2. **Panel del editor de código** después de seleccionar un archivo en el primer panel mostrara el código de este mismo, permitiendo editarlo.
@@ -131,7 +136,7 @@ function updateLabel() {
 ```
 Si corremos el nuevamente la suma y vemos el apartado de consola nos mostrara lo siguiente.
 
-![Figura 6. Depuración mediante con](Pastedimage20220102200651.png)
+![Figura 6. Depuración mediante console log.](Pastedimage20220102200651.png)
 
 Podemos observar como cada valor son números, pero la suma no es del todo correcta. 
 
@@ -154,7 +159,7 @@ function updateLabel() {
 
 Colocamos valores y presionamos el botón para sumar.
 
-![Figura 7. Breakpoints con debugge](pastedimage20220102203120.png)
+![Figura 7. Breakpoints con debugger.](pastedimage20220102203120.png)
 
 Como podemos ver suceden varias cosas curiosas.
 
@@ -164,14 +169,14 @@ Como podemos ver suceden varias cosas curiosas.
 
 Sigamos ejecutando y veamos que pasa.
 
-![Figura 8. Formas de seguir depura](Pastedimage20220102203855.png)
+![Figura 8. Formas de seguir depurar.](Pastedimage20220102203855.png)
 
 Tenemos dos formas para esto:
 1. ⏩ Hacer un salto hasta el siguiente breakpoint.
 2. ⟳ Ir línea a línea.
 
 ⏩ Demos un par de saltos entre cada breakpoint y veamos que nos muestra.
-![Figura 9. Debugger mostrando las ](pastedimage20220102204546.png)
+![Figura 9. Debugger mostrando las variables.](pastedimage20220102204546.png)
 
 #### Panel de depuración
 Si nos enfocamos el panel de depuración podemos ver el [Scope](https://developer.mozilla.org/es/docs/Glossary/Scope) con los valores de nuestras variables, tanto locales como globales, también podemos ver el call stack y como esta ordenada cada función.
@@ -205,7 +210,7 @@ Dentro de **Watch** pulsamos el icono **+** y coloquemos dentro las siguientes i
 
 `typeof sum`
 
-![Figura 11.Tipo de cada variable](Pastedimage20220102211934.png)
+![Figura 11.Tipo de cada variable.](Pastedimage20220102211934.png)
 
 Podemos notar como el tipo de cada una de las variables es un string, indicándonos que la operación que está realizando [no es una suma, sino una concatenación](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Addition).
 
@@ -223,9 +228,9 @@ Presiona `esc`, y dentro de la consola escribe lo mismo.
 
 `typeof sum`
 
-![Figura 12. Revisando cada variabl](Pastedimage20220102212628.png)
+![Figura 12. Revisando cada variable.](Pastedimage20220102212628.png)
 
-Ahora que ya sabemos que los valores son `String` y no `number`, podemos deducir que [no está sumando, sino que está concatenando](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Addition).
+Ahora que ya sabemos que los valores son `String` y no `number`, podemos deducir que [no está sumando, sino que está concatenando.](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/Addition).
 
 #### Solución
 **¿Que podemos hacer para arreglarlo?**

@@ -9,19 +9,26 @@
 
 html {
   padding: 2em 2em;
-  background: #cfcfcf;
+  background: #252426;
 }
 
-$azul: #1a669c;
-$verde: #419d78;
+$grisHover: #2d3236;
+
+$azul: #39ace7;
+$verde: #1c9083;
 $amarillo: #e0a458;
 $naranja: #f79954;
 $rosa: #c04abc;
 $negro: #2d3047;
 $blanco: #f1f1f1;
 $gris: #cfcfcf;
+$fondoNegro: #282d35;
 
-$sombra-delgada: #32325d40 0px 2px 5px -1px, #0000004d 0px 1px 3px -1px;
+// $sombra-delgada: #32325d40 0px 2px 5px -1px, #0000004d 0px 1px 3px -1px;
+// $sombra-grande: #32325d40 0px 6px 12px -2px, #0000004d 0px 3px 7px -3px;
+
+$sombra-delgada: #4961744d 0px 1px 2px 0px, #5a6f8046 0px 1px 3px 1px;
+// $sombra-delgada: #bee4fa7a 0px 2px 5px -1px, #bbd3fa4d 0px 1px 3px -1px;
 $sombra-grande: #32325d40 0px 6px 12px -2px, #0000004d 0px 3px 7px -3px;
 
 .layout {
@@ -36,9 +43,8 @@ $sombra-grande: #32325d40 0px 6px 12px -2px, #0000004d 0px 3px 7px -3px;
 }
 
 aside {
-  
   grid-area: aside;
-  background: $blanco;
+  background: $fondoNegro;
   width: 100%;
   height: 100%;
   padding: 1em 0.75em;
@@ -61,7 +67,7 @@ aside {
   grid-area: contenido;
   position: relative;
   border-radius: 0 12px 12px 0;
-  background: $blanco;
+  background: $fondoNegro;
   padding: 1em 1.25em;
   width: 100%;
 }
@@ -73,7 +79,7 @@ nav ul {
   padding: 1em 0.5em;
   a {
     font-size: 1.25em;
-    color: $negro;
+    color: $blanco;
     text-decoration: none;
     border-radius: 16px;
     width: 100%;
@@ -88,7 +94,7 @@ nav ul {
       flex-direction: row;
       align-items: center;
       justify-content: start;
-      transition: all ease-in-out .30s;
+      transition: all ease-in-out 0.3s;
       .icon {
         margin: 0 0.5em;
         font-size: 1.25em;
@@ -99,7 +105,6 @@ nav ul {
         color: $blanco;
       }
     }
-  
   }
 }
 
@@ -156,11 +161,11 @@ nav ul {
   }
 }
 .link-contacto {
-  color: $negro;
+  color: $blanco;
   text-decoration: none;
-  .card {
+  .card-simple {
     &:hover {
-      box-shadow: $sombra-grande;
+      background: $grisHover;
     }
   }
 }
@@ -168,7 +173,7 @@ nav ul {
 .card-articulo {
   box-shadow: $sombra-delgada;
   border-radius: 12px;
-  color: $negro;
+  color: $blanco;
   margin: 0.75em 0;
   padding: 1em;
   width: 18em;
@@ -196,19 +201,17 @@ nav ul {
   }
   .card-articulo-resumen {
     font-size: 1em;
-    color: #747475;
+    color: #c2c2c2;
   }
-  
+
   &:hover {
-    box-shadow: $sombra-grande;
-    .card-articulo-titulo{
+    background: $grisHover;
+    .card-articulo-titulo {
       color: $azul;
-      
     }
-  
   }
-  &:active{
-    transform: scale(.9);
+  &:active {
+    transform: scale(0.9);
   }
 }
 
@@ -223,10 +226,9 @@ nav ul {
   }
 }
 
-
 .articulo {
   // margin: 1em;
-  img{
+  img {
     border-radius: 3px;
     max-width: 100%;
     width: auto;
@@ -254,7 +256,9 @@ nav ul {
     background: $naranja;
     box-shadow: $sombra-delgada;
   }
-
+  figcaption {
+    color: $blanco;
+  }
   .contenido-articulo {
     h1,
     h2,
@@ -263,12 +267,12 @@ nav ul {
     h5,
     h6 {
       margin: 1.25rem 0;
-      color: $negro;
+      color: $blanco;
       // line-height: 1.3;
     }
     li,
     p {
-      color: $negro;
+      color: $blanco;
       font-size: 1.05em;
     }
     p {
@@ -282,31 +286,31 @@ nav ul {
       }
     }
     a {
-      background: #98d6ffbe;
+      background: #39ade767;
+      border-bottom: 1px solid $azul;
       text-decoration: none;
       font-style: italic;
       font-weight: 600;
       padding: 0 4px;
+      color: $blanco;
       &:hover {
         text-decoration: underline;
-        background: #98d6ff;
+        background: #2892c7bd;
       }
     }
-    table{
+    table {
       border-collapse: collapse;
-      th{
+      th {
         font-size: 1.25em;
         border-bottom: 2px solid #cecece;
       }
-      tr{
-        td{
+      tr {
+        td {
           margin: 6px;
           font-size: 1.15em;
           padding: 6px;
-
         }
-        &:nth-child(even){
-
+        &:nth-child(even) {
           background: #cececeaf;
         }
       }
@@ -328,15 +332,15 @@ nav ul {
       .icon {
         display: none;
       }
-      li{
+      li {
         margin: 0 12px;
         border-radius: 0;
-        border-bottom: 3px $blanco solid; 
+        border-bottom: 3px $blanco solid;
       }
       li:hover {
-        color: $negro;
+        color: $blanco;
         background: none;
-        border-bottom: 3px $verde solid; 
+        border-bottom: 3px $verde solid;
       }
     }
   }
